@@ -564,5 +564,7 @@ void sp_free_error_message(char *message)
 {
 #ifdef _WIN32
 	LocalFree(message);
+#else
+	(void)message;
 #endif
 }

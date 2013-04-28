@@ -69,6 +69,11 @@ fail:
 	return NULL;
 }
 
+/**
+ * List the serial ports available on the system.
+ *
+ * @return A null-terminated array of port name strings.
+ */
 char **sp_list_ports(void)
 {
 	char **list = NULL;
@@ -198,6 +203,9 @@ out:
 #endif
 }
 
+/**
+ * Free a port list returned by sp_list_ports.
+ */
 void sp_free_port_list(char **list)
 {
 	unsigned int i;
